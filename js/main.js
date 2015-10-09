@@ -67,7 +67,7 @@ $( "input" )
     	$( ".rgb span" ).text( value );
     	regexp = /hsl\(\s*(\d+)\s*,\s*(\d+(?:\.\d+)?%)\s*,\s*(\d+(?:\.\d+)?%)\)/g;
     	res = regexp.exec(value).slice(1);
-    	var h = ((res[0].slice(0,-1))/360);
+    	var h = ((res[0])/360);
     	var s = ((res[1].slice(0,-1))/100);
     	var l = ((res[2].slice(0,-1))/100);
     	var rgb = hslToRgb(h, s, l);
